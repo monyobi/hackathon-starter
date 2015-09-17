@@ -5,8 +5,31 @@ html
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     meta(name='csrf-token', content=_csrf)
-    title #{title} - Hackathon Starter
+    title #{title} - Stash
     != css('main')
+
+    // Google Chart placeholder to illustrate charts
+
+    script(type='text/javascript', src='https://www.google.com/jsapi')
+    script(type='text/javascript').
+      google.load("visualization", '1.1', {packages:['corechart']});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+      ['Line', 'PLSBH', 'PELAH', 'PDHA', 'PLSAH',
+      'PLSAC', 'PK', { role: 'annotation' } ],
+      ['', 12422, 3422, 2352, 2123, 2342, 2342, ''],
+      ]);
+      var options = {
+      height: 100,
+      legend: { position: 'top', maxLines: 3 },
+      bar: {groupWidth: '75%'},
+      isStacked: 'percent',
+      };
+      var chart = new google.visualization.BarChart(document.getElementById('barchart_stacked'));
+      chart.draw(data, options);
+      }
+
   body
     include partials/header
 

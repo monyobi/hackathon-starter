@@ -1,27 +1,192 @@
 extends layout
 
 block content
-  h1 Hackathon Starter
-  p.lead A boilerplate for Node.js web applications.
+  .row
+    ul.nav.nav-pills
+      li.navbar-brand
+        | LOCATION
+      li.active(role='presentation')
+        a(href='#')
+          i.fa.fa-globe 
+          | Global
+      li(role='presentation')
+        a(href='#') USA
+      li(role='presentation')
+        a(href='#') GERMANY
+      li(role='presentation')
+        a(href='#') HONG KONG
+  hr      
+  .row
+    .panel.panel-default
+      .panel-heading PACKS - Product line
+    a.btn.active(href='#') 
+      | 2015 HICKIES 
+      span.label.label-primary PLSBH
+    a.btn.active(href='#') 
+      | Elements 
+      span.label.label-primary PELAH
+    a.btn.active(href='#') 
+      | DooHickies 
+      span.label.label-primary PDHA
+    a.btn.active(href='#') 
+      | 2014 HICKIES 
+      span.label.label-primary PLSAH
+    a.btn.active(href='#') 
+      | Country Packs 
+      span.label.label-primary PLSAC
+    a.btn.active(href='#') 
+      | 2013 HICKIES 
+      span.label.label-primary PK
   hr
   .row
-    .col-sm-6
-      h2 Heading
-      p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      p
-        a.btn.btn-default(href='#', role='button') View details »
-    .col-sm-6
-      h2 Heading
-      p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      p
-        a.btn.btn-default(href='#', role='button') View details »
-    .col-sm-6
-      h2 Heading
-      p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      p
-        a.btn.btn-default(href='#', role='button') View details »
-    .col-sm-6
-      h2 Heading
-      p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      p
-        a.btn.btn-default(href='#', role='button') View details »
+    .panel.panel-default
+      .panel-heading DISPLAYS
+    a.btn(href='#') 
+      | HICKIES Displays 
+      span.label.label-primary D/SHKA
+    a.btn(href='#') 
+      | DooHickies Displays 
+      span.label.label-primary D/SDHA
+    a.btn(href='#') 
+      | LEGACY Displays  
+      span.label.label-primary DIS
+
+  hr
+  .row
+    .panel.panel-default
+      .panel-heading SKU BREAKDOWN
+    #barchart_stacked
+
+  hr
+  .row
+    .table-responsive
+      table.table.table-hover
+        thead
+          tr
+            th SKU
+            th Description
+            th Quantity
+            th Avg/Month
+            th Popularity Rank
+            th Percentage Sales
+
+        tbody
+            tr
+              td PLSBH_SOLID_001
+              td HICKIES Black
+              td 
+                | 280
+                span.label.label-danger 1 month
+              td 233
+              td 1
+              td 24%
+        tbody
+            tr
+              td PLSBH_SOLID_100
+              td HICKIES White
+              td 
+                | 2,356 
+                span.label.label-success 10 months
+              td 235
+              td 2
+              td 20%
+        tbody
+            tr
+              td PLSBH_SOLID_200
+              td HICKIES Grey
+              td 
+                | 533 
+                span.label.label-warning 2 months
+              td 235
+              td 3
+              td 18%
+        tbody
+            tr
+              td PLSBH_SOLID_001
+              td HICKIES Black
+              td 
+                | 280
+                span.label.label-danger 1 month
+              td 233
+              td 1
+              td 24%
+        tbody
+            tr
+              td PLSBH_SOLID_100
+              td HICKIES White
+              td 
+                | 2,356 
+                span.label.label-success 10 months
+              td 235
+              td 2
+              td 20%
+        tbody
+            tr
+              td PLSBH_SOLID_200
+              td HICKIES Grey
+              td 
+                | 533 
+                span.label.label-warning 2 months
+              td 235
+              td 3
+              td 18%
+        tbody
+            tr
+              td PLSBH_SOLID_001
+              td HICKIES Black
+              td 
+                | 280
+                span.label.label-danger 1 month
+              td 233
+              td 1
+              td 24%
+        tbody
+            tr
+              td PLSBH_SOLID_100
+              td HICKIES White
+              td 
+                | 2,356 
+                span.label.label-success 10 months
+              td 235
+              td 2
+              td 20%
+        tbody
+            tr
+              td PLSBH_SOLID_200
+              td HICKIES Grey
+              td 
+                | 533 
+                span.label.label-warning 2 months
+              td 235
+              td 3
+              td 18%
+        tbody
+            tr
+              td PLSBH_SOLID_001
+              td HICKIES Black
+              td 
+                | 280
+                span.label.label-danger 1 month
+              td 233
+              td 1
+              td 24%
+        tbody
+            tr
+              td PLSBH_SOLID_100
+              td HICKIES White
+              td 
+                | 2,356 
+                span.label.label-success 10 months
+              td 235
+              td 2
+              td 20%
+        tbody
+            tr
+              td PLSBH_SOLID_200
+              td HICKIES Grey
+              td 
+                | 533 
+                span.label.label-warning 2 months
+              td 235
+              td 3
+              td 18%
